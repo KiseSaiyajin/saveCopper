@@ -1,0 +1,9 @@
+# ninja log v5
+3	1320	7409334301588519	saveCopper_autogen/timestamp	8888917dc1a96729
+3	1320	7409334301588519	saveCopper_autogen/mocs_compilation.cpp	8888917dc1a96729
+3	1320	7409334301588519	E:/Projects/saveCopper/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/saveCopper_autogen/timestamp	8888917dc1a96729
+3	1320	7409334301588519	E:/Projects/saveCopper/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/saveCopper_autogen/mocs_compilation.cpp	8888917dc1a96729
+1322	6614	7409334355572586	CMakeFiles/saveCopper.dir/saveCopper_autogen/mocs_compilation.cpp.obj	955fadbcfb716617
+1338	6697	7409334356444985	CMakeFiles/saveCopper.dir/main.cpp.obj	c3ef2a4d97a7af88
+1330	7188	7409334361355151	CMakeFiles/saveCopper.dir/mainwindow.cpp.obj	fffad84a3c18baa9
+7244	7876	7409334367914514	saveCopper.exe	d4f59b81af194d5e
