@@ -30,7 +30,7 @@ void MainWindow::selectFile()
     QString filePath = QFileDialog::getOpenFileName(this, "Выберите файл");
     if (!filePath.isEmpty()) {
         selectedFilePath = filePath;
-        ui->selectedFileLabel->setText(selectedFilePath);
+        ui->lineEdit_1->setText(selectedFilePath);
     }
 }
 
