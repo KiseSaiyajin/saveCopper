@@ -54,12 +54,12 @@ void MainWindow::copyFile()
         ui->lineEdit_2->setText(selectedFilePath);
     }
 
-    if (QFile::exists(destPath)) {
-        QFile::remove(destPath);
-    }
+    // if (QFile::exists(destPath)) {
+    //     QFile::remove(destPath);
+    // }
 
     if (file.copy(destPath)) {
-        QMessageBox::information(this, "Успех", "Файл успешно перемещен");
+        QMessageBox::information(this, "Успех", "Файл успешно скопирован");
     } else {
         QMessageBox::warning(this, "Ошибка", "Не удалось переместить файл");
     }
