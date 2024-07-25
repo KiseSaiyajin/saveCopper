@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     model->setRootPath(QDir::rootPath());
     ui->treeView->setModel(model);
     connect(ui->selectFileButton, &QPushButton::clicked, this, &MainWindow::selectFile);
-    connect(ui->moveFileButton, &QPushButton::clicked, this, &MainWindow::moveFile);
+    connect(ui->copyFileButton, &QPushButton::clicked, this, &MainWindow::copyFile);
 }
 
 MainWindow::~MainWindow()
@@ -34,7 +34,7 @@ void MainWindow::selectFile()
     }
 }
 
-void MainWindow::moveFile()
+void MainWindow::copyFile()
 {
     if (selectedFilePath.isEmpty()) {
         QMessageBox::warning(this, "Предупреждение", "Сначала выберите файл");
@@ -49,12 +49,16 @@ void MainWindow::moveFile()
     QFile file(selectedFilePath);
     QString fileName = QFileInfo(file).fileName();
     QString destPath = QDir(destDir).filePath(fileName);
+    if (!destPath.isEmpty()) {
+        selectedFilePath = destPath;
+        ui->lineEdit_2->setText(selectedFilePath);
+    }
 
     if (QFile::exists(destPath)) {
         QFile::remove(destPath);
     }
 
-    if (file.rename(destPath)) {
+    if (file.copy(destPath)) {
         QMessageBox::information(this, "Успех", "Файл успешно перемещен");
     } else {
         QMessageBox::warning(this, "Ошибка", "Не удалось переместить файл");

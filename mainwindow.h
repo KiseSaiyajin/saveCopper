@@ -21,7 +21,7 @@ private slots:
 
 
     void selectFile();
-    void moveFile();
+    void copyFile();
 
 private:
     Ui::MainWindow *ui;

@@ -45,7 +45,7 @@ public:
     QLabel *label_2;
     QHBoxLayout *horizontalLayout;
     QLineEdit *lineEdit_2;
-    QPushButton *moveFileButton;
+    QPushButton *copyFileButton;
     QMenuBar *menubar;
     QMenu *menusaveCopper;
     QStatusBar *statusbar;
@@ -118,11 +118,11 @@ public:
 
         horizontalLayout->addWidget(lineEdit_2);
 
-        moveFileButton = new QPushButton(widget1);
-        moveFileButton->setObjectName("moveFileButton");
-        moveFileButton->setMaximumSize(QSize(16777215, 16777215));
+        copyFileButton = new QPushButton(widget1);
+        copyFileButton->setObjectName("copyFileButton");
+        copyFileButton->setMaximumSize(QSize(16777215, 16777215));
 
-        horizontalLayout->addWidget(moveFileButton);
+        horizontalLayout->addWidget(copyFileButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -152,7 +152,7 @@ public:
         selectedFileLabel->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\277\320\270\321\200\320\276\320\262\320\260\321\202\321\214 \320\270\320\267", nullptr));
         selectFileButton->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\320\267\320\276\321\200/\320\232\320\276\320\277\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\277\320\270\321\200\320\276\320\262\320\260\321\202\321\214 \320\262", nullptr));
-        moveFileButton->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\320\267\320\276\321\200/\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214", nullptr));
+        copyFileButton->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\320\267\320\276\321\200/\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214", nullptr));
         menusaveCopper->setTitle(QCoreApplication::translate("MainWindow", "saveCopper", nullptr));
     } // retranslateUi
 
